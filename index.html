@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Weather</title>
+  <link rel="shortcut icon" href="../dist/imgs/forecast.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pangolin&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e2faf09bf9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="content">
+    <header>
+      <div class="page-name">
+        <i class="fas fa-cloud-sun"></i>
+        Open Weather
+      </div>
+      <form class="form" id="searchForm">
+        <input
+          class="input"
+          id="searchInput"
+          type="text"
+          placeholder="Enter Location..."
+        >
+        <button class="btn btn-submit" id="searchBtn" type="sumbit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </header>
+
+    <main id="searchResult">
+      <div class="event details__time-location">
+        <h3 id="location"></h3>
+        <p id="localTime"></p>
+      </div>
+
+      <div class="event details__weather-info">
+        <div class="info-container">
+          <div class="icon-container">
+            <img class="icon" src="./icons/rain.png" alt="Precipitation">
+            <p>Precipitation</p>
+          </div>
+          <p id="precipitation"></p>
+        </div>
+        <div class="info-container">
+          <div class="icon-container">
+            <img class="icon" src="./icons/humidity.png" alt="Humidity">
+            <p>Humidity</p>
+          </div>
+          <p id="humidity"></p>
+        </div>
+        <div class="info-container">
+          <div class="icon-container">
+            <img class="icon" src="./icons/wind.png" alt="Wind Speed">
+            <p>Wind speed</p>
+          </div>
+          <p id="windSpeed"></p>
+        </div>
+      </div>
+
+      <div class="event details__weather-status">
+        <div class="weather-container">
+          <img id="weatherIcon">
+          <p id="temperature"></p>
+        </div>
+        <p id="condition"></p>
+      </div>
+
+      <div class="event details__weather-gif">
+        <img id="weatherGif">
+      </div>
+
+    </main>
+
+    <div id="loadingComponent">
+      <div class="loading-spinner"></div>
+    </div>
+
+  </div>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
